@@ -3,11 +3,11 @@
 }
 
 body {
-    background-image: url(../img/kozaky.jpg.png);
+    background-image: url(../img/kozaky.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment: fixed;
-    position: relative;
+    /* position: relative; */
     font-family: 'Amatic SC', cursive;
 }
 
@@ -15,35 +15,56 @@ body {
     margin: auto;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    box-shadow: 0px 20px 10px 20px rgb(0 0 0 / 51%);
-    width: 50%;
-    background-color: #03a9f487;
     align-items: center;
 }
 
 .cartoon-view-section__header {
     position: fixed;
     z-index: 1;
-    align-content: center;
-    background-color: inherit;
-    width: inherit;
-    opacity: 0.9;
     font-size: 3rem;
+    background-color: #03a9f487;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    padding: auto 3rem;
 }
 
 #search-cartoons {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: 2rem;
+    margin: 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    border: none;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.3rem;
+    width: 15rem;
+}
+
+#search-cartoons::placeholder {
+    font-family: 'Amatic SC', cursive;
 }
 
 .cartoon-view-section__cartoon-items {
-    margin-top: 10rem;
+    margin-top: 5.5rem;
+    box-shadow: 0px 20px 10px 20px rgb(0 0 0 / 51%);
+    width: 50%;
+    background-color: #03a9f487;
+}
+
+.cartoon-view-section__cartoon-items iframe {
+    width: 95%;
+    padding: 0.5rem;
 }
 
 .right-cartoon-section {
     position: fixed;
-    z-index: 2;
-    height: 5rem;
+    color: azure;
+    z-index: 1;
+    background-color: #03a9f487;
+    height: 2rem;
+    bottom: 0;
+    width: 100%;
 }
