@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-image: url(../img/kozaky.jpg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    position: relative;
+    font-family: 'Amatic SC', cursive;
+}
+
+.cartoon-view-section {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 20px 10px 20px rgb(0 0 0 / 51%);
+    width: 50%;
+    background-color: #03a9f487;
+    align-items: center;
+}
+
+.cartoon-view-section__header {
+    position: fixed;
+    z-index: 1;
+    align-content: center;
+    background-color: inherit;
+    width: inherit;
+    opacity: 0.9;
+    font-size: 3rem;
+}
+
+#search-cartoons {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.cartoon-view-section__cartoon-items {
+    margin-top: 10rem;
+}
+
+.right-cartoon-section {
+    position: fixed;
+    z-index: 2;
+    height: 5rem;
+}
