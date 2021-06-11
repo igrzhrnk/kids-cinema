@@ -1,5 +1,11 @@
+:root {
+    --global-font-family: 'Amatic SC', cursive;
+    --light-blue-color: #03a9f487;
+}
+
 * {
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -7,8 +13,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment: fixed;
-    /* position: relative; */
-    font-family: 'Amatic SC', cursive;
+    font-family: var(--global-font-family);
 }
 
 .cartoon-view-section {
@@ -20,16 +25,15 @@ body {
 
 .cartoon-view-section__header {
     position: fixed;
-    z-index: 1;
     font-size: 3rem;
-    background-color: #03a9f487;
+    background-color: var(--light-blue-color);
     width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-content: center;
     padding: auto 3rem;
+    
 }
 
 #search-cartoons {
@@ -38,33 +42,69 @@ body {
     border-radius: 0.3rem;
     padding: 0.2rem 0.5rem;
     border: none;
-    font-family: 'Amatic SC', cursive;
     font-size: 1.3rem;
     width: 15rem;
 }
 
 #search-cartoons::placeholder {
-    font-family: 'Amatic SC', cursive;
+    font-family: var(--global-font-family);
 }
 
 .cartoon-view-section__cartoon-items {
-    margin-top: 5.5rem;
+    margin-top: 5.65rem;
     box-shadow: 0px 20px 10px 20px rgb(0 0 0 / 51%);
-    width: 50%;
-    background-color: #03a9f487;
+    width: 60%;
+    background-color: var(--light-blue-color);
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 1200px;
 }
 
 .cartoon-view-section__cartoon-items iframe {
-    width: 95%;
-    padding: 0.5rem;
+    width: auto;
+}
+
+iframe {
+    padding: 0.5rem 1rem;
 }
 
 .right-cartoon-section {
+    display: flex;
+    flex-flow: row wrap;
     position: fixed;
     color: azure;
-    z-index: 1;
-    background-color: #03a9f487;
+    background-color: var(--light-blue-color);
     height: 2rem;
+    right: 0;
     bottom: 0;
+    left: 0;
     width: 100%;
+    justify-content: space-around;
+    align-content: center;
+}
+
+@media (max-width: 576px) {
+    .cartoon-view-section__cartoon-items {
+        margin-top: 10.65rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 690px) {
+    .cartoon-view-section__cartoon-items {
+        width: 100%;
+    }
+}
+
+@media (max-width: 778px) {
+    .cartoon-view-section__cartoon-items {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .cartoon-view-section__cartoon-items {
+        width: 70%;
+    }
 }
